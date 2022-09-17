@@ -1,4 +1,7 @@
 'use strict';
+
+const { execArgv } = require('process');
+
 class OrganizationParty{
     #data
     #numberExistingGroup
@@ -10,6 +13,22 @@ class OrganizationParty{
         this.#numberExistingGroup = this.#data.groups.length
         this.#numberExistingColor = this.#data.colors.length
         this.#numberPersonWithoutGroup = this.#data.persons.length
+    }
+    // CASE !: (the actual group is equal to the amount of color ) distribute people without group to existing groups
+    fillGroups(){
+        let groups = this.#data.groups;
+        let peopleWithoutGroup = this.#data.persons
+        let maxPeopleInsideGroup = this.getNumberMaxPersonInsideGroup()
+        while (peopleWithoutGroup.length>0){
+            for (let i = 0; i < groups.length; i++) {
+                if (peopleWithoutGroup.length == 0){
+                    break;
+                }
+                if (groups[i].length < maxPeopleInsideGroup){
+                    groups[i].push(peopleWithoutGroup.pop())
+                }
+            }
+        }
     }
 
     #fetchData(){
@@ -25,13 +44,16 @@ class OrganizationParty{
 
     #getNumberPersonsInsideGroup(){
         var totalPersonsInsideGroup;
-        totalPersonsInsideGroup = this.#data.groups.map(data =>{
-            return data.length
-        });
-        var sum = totalPersonsInsideGroup.reduce(function(a, b){
+        var sum = this.#getListNumberPersonInsideGroup().reduce(function(a, b){
         return a + b;
         }, 0);
         return sum
+    }
+
+    #getListNumberPersonInsideGroup(){
+        return  this.#data.groups.map(data =>{
+            return data.length
+        });
     }
 
     getData(){
@@ -49,11 +71,26 @@ class OrganizationParty{
     getnumberPersonWithoutGroup(){
         return this.#numberPersonWithoutGroup;
     }
+
+    getNumberMaxPersonInsideGroup(){
+        let list = this.#getListNumberPersonInsideGroup()
+        return Math.max(...list);
+    }
+
+    createFinalFormat(){
+        let finalStructure = {};
+        let allGroups = this.#data.groups;
+        let index = 0;
+        this.#data.colors.forEach(color => {
+            finalStructure[color] = allGroups[index];
+            index ++;
+        });
+        return finalStructure
+    }
 }
 
 const newInstance = new OrganizationParty()
-console.log(newInstance.getData())
-console.log(newInstance.getNumbersExistingGroup())
-console.log(newInstance.getNumbersExistingColor())
-console.log(newInstance.getnumberPersonWithoutGroup())
-console.log(newInstance.getTotalPersons())
+
+newInstance.fillGroups()
+console.log(newInstance.createFinalFormat())
+
