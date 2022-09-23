@@ -1,5 +1,5 @@
 {
-  "groups": [
+  "groups": [ 
     ["Abel", "Yasiris"],
     ["Josue", "Natalie"],
     ["Malee", "Fatima", "Jenia", "Orlando"],
@@ -7,7 +7,7 @@
     ["Issac", "Julie"],
     ["Daniel", "Jonathan"],
     ["Oscar", "Michelle", "Tello"],
-    ["Esterben", "Elias", "Pride", "Miguel","Hoal", "camp"],
+    ["Esterben", "Elias", "Pride", "Miguel"],
     ["Marjorie", "Bryan"]
   ],
   "persons": ["Rene", "Oliver", "Ricki", "Alexis", "Ruth"],
