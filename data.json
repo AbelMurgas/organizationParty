@@ -1,7 +1,25 @@
 {
-    "groups":[["Abel", "Yasiris"], ["Josue", "Natalie"], ["Malee", "Fatima", "Jenia","Orlando"],
-              ["Luki", "Dayron"], ["Issac","Julie"], ["Daniel", "Jonathan"], ["Oscar", "Michelle","Tello"],
-              ["Esterben", "Elias", "Pride", "Miguel"], ["Marjorie", "Bryan"]],
-    "persons":["Rene","Oliver", "Ricki", "Alexis", "Ruth"],
-    "colors":["Rojo","Amarillo", "Negro", "Chocolate", "Verdes", "gris","Azul","morado","rosado"]
+  "groups": [
+    ["Abel", "Yasiris"],
+    ["Josue", "Natalie"],
+    ["Malee", "Fatima", "Jenia", "Orlando"],
+    ["Luki", "Dayron"],
+    ["Issac", "Julie"],
+    ["Daniel", "Jonathan"],
+    ["Oscar", "Michelle", "Tello"],
+    ["Esterben", "Elias", "Pride", "Miguel","Hoal", "camp"],
+    ["Marjorie", "Bryan"]
+  ],
+  "persons": ["Rene", "Oliver", "Ricki", "Alexis", "Ruth"],
+  "colors": [
+    "Rojo",
+    "Amarillo",
+    "Negro",
+    "Chocolate",
+    "Verdes",
+    "gris",
+    "Azul",
+    "morado",
+    "rosado"
+  ]
 }
