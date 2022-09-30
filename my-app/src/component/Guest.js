@@ -1,23 +1,27 @@
 import AnimalsData from './AnimalsData';
 import React from 'react';
-import Canvas from './Canvas';
+import {useState} from 'react';
 
-export default class Guest extends React.Component{
+export default function Guest(props){
+  const [show, setShow] = useState(false);
+  const element = props.group.map(element => {
+    return <img src={AnimalsData[element]} class="" alt="..." />
+  });
 
- constructor(props){
-  super(props);
-  console.log(props.group)
-
- }
- render(){return (
+  function okLol(){
+    setShow(!show)
+    setTimeout(() => {
+      setShow(false)
+    }, 1000);
+  }
+ return (
   <div>
-    <button className="btn-animals" type="button" data-bs-toggle="offcanvas" data-bs-target={`#offcanvasBottom${this.props.name}`} aria-controls={`offcanvasBottom${this.props.name}`}>
-    <div className="person-icon rounded rainbow-background m-2 link buzz-out-on-hover">
-      <img src={AnimalsData[this.props.name]} className="card-img-top"  alt="..."></img>
+    <button className="btn-animals" onClick={okLol} >
+    <div className="shadow color-icon rounded-4 m-3 link buzz-out-on-hover " style={{backgroundColor:props.color}}>
+    {show && element}
     </div>
+    
     </button>
-    <Canvas color= {this.props.color} name={this.props.name} id={this.props.id} image = {AnimalsData[this.props.name]} group = {this.props.group} />
   </div>
  );
-}
 }

@@ -10,17 +10,19 @@ export default function Guests(){
 
   useEffect(() => {
     const newInstance = new OrganizationParty(data);
-    const rules = newInstance.getInformationEachPerson()
+    const rules = newInstance.getFinalFormat()
+    console.log(rules)
+
     function generateComponent(rules) {
-      setNum(rules.map(person => {
-       return <Guest key={person.name} {...person}/>
+      setNum(rules.map((color, index) => {
+       return <Guest key={index} {...color}/>
       }));
     }
     generateComponent(rules);
   }, []);
   
  return (
-  <div className="container d-flex flex-wrap mt-5 justify-content-center align-items-center">
+  <div className="d-flex flex-wrap mt-5 justify-content-center align-items-center">
    {components}
   </div>
  );

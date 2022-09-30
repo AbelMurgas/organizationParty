@@ -1,23 +1,26 @@
-body {
-  background-image: url("../assets/back.jpg");
-  background-size: cover;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
+
 html{
     width:100%;
     height:100%;
 }
+
 body{
+    background: linear-gradient(117.06deg, #F8EE06 3.69%, #FF0099 97.8%);
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    font-family: 'Jura', sans-serif;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+
 }
 
 code {
@@ -25,15 +28,29 @@ code {
     monospace;
 }
 
-.rainbow-text {
-  background: linear-gradient(90deg, rgba(255,0,0,1) 14%, rgba(253,134,29,1) 28%, rgba(251,253,29,1) 42%, rgba(57,253,35,1) 56%, rgba(38,168,253,1) 70%, rgba(210,69,252,1) 84%, rgba(132,39,253,1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;  
+.title{
+  position: relative;
 }
 
-.person-icon{
-  width: 64px;
+.text-100{
+  font-size: 6rem;
+}
+
+.text-50{
+  font-size: 3rem;
+}
+
+.sp-line{
+  background-color: white;
+}
+
+
+.color-icon{
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
 .rainbow-background {
@@ -59,21 +76,49 @@ code {
 	text-decoration: none;
 	color: #000;
 }
-.withe{
 
-}
-.container{
-  height: 100%;
-}
-
-.fs-1{
-  font-weight: 800;
+.line{
+  margin: 0;
+  height: 1px;
+  border: none;
+  background-color: white;
+  opacity: 1;
 }
 
-.principal{
-  width: 100%;
-  height: 100%;
+.heart-icon{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+
+  top: 33%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  mix-blend-mode: lighten;
+  transform: translate(-50%, -50%); 
 }
+
+.heart-icon img{
+  width: 200px;
+  
+}
+
+.text-20{
+  size: 20px;
+  font-size: 20px;
+}
+
+.designer-signature{
+  font-size: 35px;
+  font-weight: 400;
+  color: black;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
 /*====================*/
 /* BUZZ OUT
 /*====================*/
@@ -179,3 +224,66 @@ code {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
+.triangle-top .triangle-background-left{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: white;
+  transform: translate(-150px, -400px) rotateY(0deg) rotate(350deg) ;
+}
+
+.triangle-top .triangle-background-rigth{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  background: white;
+  transform: translate(150px,-400px) rotateY(0deg) rotate(190deg) ;
+}
+.triangle-top{
+  opacity: 0.33;
+}
+
+.triangle-bottom .triangle-background-left{
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: white;
+  transform: translate(150px,400px) rotateY(0deg) rotate(165deg) ;
+}
+
+.triangle-bottom .triangle-background-rigth{
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  background: white;
+  transform: translate(-150px,400px) rotateY(0deg) rotate(15deg) ;
+}
+
+.bgimage{
+  z-index: -40;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-image: url("../assets/back.jpg");
+  width: 100%;
+  height: 100%;
+  opacity: 0.60;
+  mix-blend-mode: lighten;
+}
+
+

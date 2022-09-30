@@ -87,18 +87,20 @@ export default class OrganizationParty{
     }
 
     createFinalFormat(groups, colors){ //privado
-
-        let finalStructure = {};
+        let finalFormat = [];
         /*
         rojo: ["abel","jose","cain"]*/
         let allGroups = [...groups];
         let allColors = [...colors];
         let index = 0;
         allColors.forEach(color => {
-            finalStructure[color] = allGroups[index];
+            let finalStructure = {};
+            finalStructure["color"] = color
+            finalStructure["group"] = allGroups[index];
             index ++;
+            finalFormat.push(finalStructure)
         });
-        return finalStructure;
+        return finalFormat;
     }
 
     getInformationEachPerson(group){

@@ -1,6 +1,5 @@
 {
   "groups": [ 
-    ["Abel", "Yasiris"],
     ["Josue", "Nathaly"],
     ["Malee", "Fatima", "Jenia", "Orlando"],
     ["Luki", "Dayron"],
@@ -8,15 +7,16 @@
     ["Daniel", "Jonathan"],
     ["Oscar", "Michelle", "Tello"],
     ["Sterben", "Elias", "Pride", "Miguel"],
+    ["Abel", "Yasiris"],
     ["Marjorie", "Bryan"]
   ],
   "persons": ["Rene", "Oliver", "Ricki", "Alexis", "Ruth", "Carlos"],
   "colors": [
-    "white",
     "yellow",
-    "black",
     "brown",
+    "white",
     "green", 
+    "black",
     "red",
     "blue",
     "purple",
