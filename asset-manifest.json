@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/organizationParty/static/css/main.c707c2eb.css",
+    "main.js": "/organizationParty/static/js/main.6d404fd4.js",
+    "static/media/back.jpg": "/organizationParty/static/media/back.b1e7e0142ec86e994faa.jpg",
+    "static/media/heart.gif": "/organizationParty/static/media/heart.0dfc813f7e6f78c786b6.gif",
+    "index.html": "/organizationParty/index.html",
+    "main.c707c2eb.css.map": "/organizationParty/static/css/main.c707c2eb.css.map",
+    "main.6d404fd4.js.map": "/organizationParty/static/js/main.6d404fd4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c707c2eb.css",
+    "static/js/main.6d404fd4.js"
+  ]
+}
